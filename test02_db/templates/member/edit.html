@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>회원 수정</title>
+</head>
+
+<body>
+    <h1>회원 수정</h1>
+    <form action="/member/update" method="post">
+        <!-- 어떤 회원인지 서버에 알려주는 값 (화면에는 안 보임) -->
+        <input type="hidden" name="num" value="{{ row.num }}">
+        <label>이름 <input type="text" name="name" value="{{ row.name }}"></label><br>
+        <label>주소 <input type="text" name="addr" value="{{ row.addr }}"></label><br>
+        <button type="submit">수정</button>
+    </form>
+</body>
+
+</html>
